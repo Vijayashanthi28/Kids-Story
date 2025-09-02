@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+       <!-- Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="navlogo-icon"><img src="nav logo.png"></div>
+                <span>MagicPage</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Here..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                <div class="user-icon" id="userIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signinModal">
+        <div class="signin-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <p class="modal-subtitle">Sign in to your MagicPage account</p>
+            </div>
+            
+            <form class="signin-form" id="signinForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-input" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#forgot">Forgot your password?</a>
+            </div>
+            
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-signin">
+                <button class="social-btn" id="googleSignin">
+                    <i class="fab fa-google" style="color: #db4437;"></i>
+                    Google
+                </button>
+                <button class="social-btn" id="facebookSignin">
+                    <i class="fab fa-facebook" style="color: #4267B2;"></i>
+                    Facebook
+                </button>
+            </div>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="#signup">Sign up here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Area -->
+    <div class="search-results">
+        <div class="search-status" id="searchStatus"></div>
+        
+        <!-- Sample search results that will be shown when searching -->
+        <div class="result-item" id="result1" data-keywords="home welcome landing main page">
+            <div class="result-title">Home Page</div>
+            <div class="result-description">Welcome to MagicPage - your gateway to amazing content and stories.</div>
+        </div>
+        
+        <div class="result-item" id="result2" data-keywords="stories tales content articles blog posts">
+            <div class="result-title">Stories Section</div>
+            <div class="result-description">Discover captivating stories and articles from our community of writers.</div>
+        </div>
+        
+        <div class="result-item" id="result3" data-keywords="about company team mission vision history">
+            <div class="result-title">About Us</div>
+            <div class="result-description">Learn more about our company, mission, and the team behind MagicPage.</div>
+        </div>
+        
+        <div class="result-item" id="result4" data-keywords="contact support help email phone address">
+            <div class="result-title">Contact Information</div>
+            <div class="result-description">Get in touch with our support team for any questions or assistance.</div>
+        </div>
+        
+        <div class="result-item" id="result5" data-keywords="blog news updates articles latest posts">
+            <div class="result-title">Blog & News</div>
+            <div class="result-description">Stay updated with our latest blog posts, news, and announcements.</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-container">
+            <div class="bloghero-content">
+                <div class="thor-character-left"><img src="thor left.png"></div>
+                <div class="bloghero-message">
+                    <div class="bloghero-quote">
+                        "Stories don't just entertain — they shape hearts, spark minds, and build lifelong readers."
+                    </div>
+                </div>
+                <div class="thor-character-right"><img src="thor right.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Introduction -->
+    <section class="blog-intro">
+        <div class="blog-container">
+            <h1 class="blog-title">Blog</h1>
+            <p class="blog-description">
+                This blog is a resource for parents and carers. It offers parenting guidance around childhood themes and reading guides to help you choose the best books for kids.
+            </p>
+            <div class="divider-line"></div>
+        </div>
+    </section>
+
+    <!-- Parenting Guides Section -->
+    <section class="parenting-section">
+        <div class="blog-container">
+            <div class="blogsection-header">
+                <h2 class="blogsection-title">Parenting Guides</h2>
+                <p class="blogsection-subtitle">
+                    The parenting guides are a collection of resources, guidance, and tips to help parents navigate childhood with kids as they grow.
+                </p>
+            </div>
+
+            <div class="guides-grid">
+                <div class="guide-card">
+                    <div class="guide-image"><img src="blog 1.jpg"></div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Helping Your Child with Bedtime Fears</h3>
+                        <p class="guide-text">
+                            Discover calming techniques and bedtime routines that ease nighttime anxiety. This guide offers practical tips to help your child feel safe, secure, and ready for sweet dreams.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-image"><img src="blog 2.jpg"></div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">The Power of Storytime: Bonding Through Books</h3>
+                        <p class="guide-text">
+                            Learn how shared reading strengthens your connection with your child. Explore ways to make storytime interactive, fun, and emotionally enriching for both of you.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="guide-card">
+                    <div class="guide-image"><img src="blog 3.jpg"></div>
+                    <div class="guide-content">
+                        <h3 class="guide-title">Raising Emotionally Resilient Kids</h3>
+                        <p class="guide-text">
+                            Support your child in navigating big feelings through empathy, storytelling, and daily habits. This guide provides tools to build emotional intelligence in a nurturing way.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+     <div class="divider-line"></div>
+
+    <!-- Book Review Section -->
+    <section class="book-review-section">
+        <div class="blog-container">
+            <div class="review-header">
+                <h2 class="review-title">Book Review</h2>
+                <p class="review-description">
+                    A beautifully illustrated journey of transformation, perfect for teaching days of the week and healthy eating. Simple, engaging, and loved by young readers.
+                </p>
+            </div>
+
+            <div class="books-grid">
+                <div class="book-card">
+                    <div class="book-info">
+                        <div class="book-cover "><img src="blog 4.jpg"></div>
+                        <h3 class="book-category">Top 10 Books About Nature</h3>
+                        <p class="book-summary">
+                            Discover beautiful children's books that introduce kids to the wonders of the natural world — from forests and oceans to animals and weather.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-info">
+                        <div class="book-cover "><img src="blog 5.png"></div>
+                        <h3 class="book-category">Top 10 Books About Emotions</h3>
+                        <p class="book-summary">
+                            These stories help children understand and express feelings like joy, anger, sadness, and kindness in gentle, relatable ways.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="book-card">
+                    <div class="book-info">
+                        <div class="book-cover "><img src="blog 6.png"></div>
+                        <h3 class="book-category">Top 10 Bedtime Books</h3>
+                        <p class="book-summary">
+                            Explore soothing, magical tales perfect for ending the day with calm minds and happy dreams.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider-line"></div>
+
+    <!-- Love of Reading Section -->
+    <section class="reading-love-section">
+        <div class="blog-container">
+            <div class="love-header">
+                <h2 class="love-title">Love of Reading</h2>
+            </div>
+
+            <div class="reading-books-grid">
+                <div class="reading-book-card">
+                    <div class="reading-book-info">
+                        <div class="reading-book-cover "><img src="blog 7.jpg"></div>
+                        <h3 class="reading-book-title">Top 10 Books About the Love of Reading</h3>
+                        <p class="reading-book-text">
+                            Explore delightful books that highlight the joy of reading, the magic of libraries, and the adventures found inside every page. A must-read list for growing bookworms!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reading-book-card">
+                    <div class="reading-book-info">
+                        <div class="reading-book-cover "><img src="blog 8.jpg"></div>
+                        <h3 class="reading-book-title">Top 10 Books About the Love of Reading</h3>
+                        <p class="reading-book-text">
+                            Explore delightful books that highlight the joy of reading, the magic of libraries, and the adventures found inside every page. A must-read list for growing bookworms!
+                        </p>
+                    </div>
+                </div>
+
+                <div class="reading-book-card">
+                    <div class="reading-book-info">
+                        <div class="reading-book-cover "><img src="blog 9.jpg"></div>
+                        <h3 class="reading-book-title">Top 10 Books About the Love of Reading</h3>
+                        <p class="reading-book-text">
+                            Explore delightful books that highlight the joy of reading, the magic of libraries, and the adventures found inside every page. A must-read list for growing bookworms!
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Book Creator Interview Section -->
+    <section class="interview-section">
+        <div class="blog-container">
+            <div class="interview-header">
+                <h2 class="interview-title">Book Creator Interview</h2>
+            </div>
+
+            <div class="interview-grid">
+                <div class="interview-card">
+                    <div class="interview-image"><img src="au 1.jpg"></div>
+                    <div class="interview-content">
+                        <p class="interview-quote">
+                            "Stories are where imagination meets heart," says Emma Ray, author of The Moonlight Library and other beloved children's books. In this interview, she shares her creative journey and what sparks her storytelling magic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="interview-card">
+                    <div class="interview-image"><img src="au 2.jpg"></div>
+                    <div class="interview-content">
+                        <p class="interview-quote">
+                            "Stories are where imagination meets heart," says Emma Ray, author of The Moonlight Library and other beloved children's books. In this interview, she shares her creative journey and what sparks her storytelling magic.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="interview-card">
+                    <div class="interview-image"><img src="au 3.jpg"></div>
+                    <div class="interview-content">
+                        <p class="interview-quote">
+                            "Stories are where imagination meets heart," says Emma Ray, author of The Moonlight Library and other beloved children's books. In this interview, she shares her creative journey and what sparks her storytelling magic.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    
+      <div class="footer-container">
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="footer logo.png">
+                <div class="flogo-text">MagicPage</div><br>
+             </div>
+            <div class="copyright">2025 Magicpage Limited</div>
+           
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Magicpage corporate</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Available in</h3>
+                <ul>
+                    <li><a href="#">Coimbatore</a></li>
+                    <li><a href="#">Bengaluru</a></li>
+                    <li><a href="#">Chennai</a></li>
+                    <li><a href="#">kolkata</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms& Conditions</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                    <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                    <a href="#" class="social-icon "><img src="youtube.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-download">
+            <div class="app-text">For better experience , download the app now</div>
+            <div class="app-buttons">
+                <a href="#" class="app-button">
+                    <div class="app-icon"><img src="googleplay.png"></div>
+                    
+                </a>
+                <a href="#" class="app-button">
+                    <div class="app-icon "><img src="applestore.png"></div>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

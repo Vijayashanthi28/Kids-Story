@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+
+     <!-- Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="navlogo-icon"><img src="nav logo.png"></div>
+                <span>MagicPage</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Here..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                <div class="user-icon" id="userIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signinModal">
+        <div class="signin-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <p class="modal-subtitle">Sign in to your MagicPage account</p>
+            </div>
+            
+            <form class="signin-form" id="signinForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-input" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#forgot">Forgot your password?</a>
+            </div>
+            
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-signin">
+                <button class="social-btn" id="googleSignin">
+                    <i class="fab fa-google" style="color: #db4437;"></i>
+                    Google
+                </button>
+                <button class="social-btn" id="facebookSignin">
+                    <i class="fab fa-facebook" style="color: #4267B2;"></i>
+                    Facebook
+                </button>
+            </div>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="#signup">Sign up here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Area -->
+    <div class="search-results">
+        <div class="search-status" id="searchStatus"></div>
+        
+        <!-- Sample search results that will be shown when searching -->
+        <div class="result-item" id="result1" data-keywords="home welcome landing main page">
+            <div class="result-title">Home Page</div>
+            <div class="result-description">Welcome to MagicPage - your gateway to amazing content and stories.</div>
+        </div>
+        
+        <div class="result-item" id="result2" data-keywords="stories tales content articles blog posts">
+            <div class="result-title">Stories Section</div>
+            <div class="result-description">Discover captivating stories and articles from our community of writers.</div>
+        </div>
+        
+        <div class="result-item" id="result3" data-keywords="about company team mission vision history">
+            <div class="result-title">About Us</div>
+            <div class="result-description">Learn more about our company, mission, and the team behind MagicPage.</div>
+        </div>
+        
+        <div class="result-item" id="result4" data-keywords="contact support help email phone address">
+            <div class="result-title">Contact Information</div>
+            <div class="result-description">Get in touch with our support team for any questions or assistance.</div>
+        </div>
+        
+        <div class="result-item" id="result5" data-keywords="blog news updates articles latest posts">
+            <div class="result-title">Blog & News</div>
+            <div class="result-description">Stay updated with our latest blog posts, news, and announcements.</div>
+        </div>
+    </div>
+
+
+       <div class="cosmic-villain-container">
+        <div class="supreme-ruler-header">
+            <div class="armored-monarch-left"><img src="st left.png">
+            </div>
+            <div class="mysterious-figure-right"><img src="st right.png">
+            </div>
+            
+            <div class="central-mask-emblem"> <img src="st 3.png">
+            </div>
+            
+            <div class="prophetic-quote-text">
+                "When the world stops turning, maybe it just needs a story to spin it again."
+            </div>
+        </div>
+       </div>
+        
+        <div class="vintage-comics-grid">
+                <div class="comic-book-stack">
+                    <img src="ad 1.jpg"></div>
+                    </div>
+                     <div class="apocalyptic-subtitle">
+                "The Day the Sky Stopped Smiling"
+            </div><br>
+
+             <div class="vintage-comics-grid">
+                <div class="comic-book-stack">
+                    <img src="story1.jpg"></div>
+                    </div>
+                     <div class="apocalyptic-subtitle">
+               Once, in a little town called Willowdrop, the sky was always smiling. Clouds danced, the sun beamed, and kids played under the bright blue dome.
+            </div>
+
+
+             <div class="vintage-comics-grid">
+                <div class="comic-book-stack">
+                    <img src="story 2.jpg"></div>
+                    </div>
+                     <div class="apocalyptic-subtitle">
+                But one morning, eberything changed .<br>
+                The Sky turned gray. Thunder growled like a hungry giant. And then, something strange happened - a giant crack
+                split the clouds, and from it, a voice echoed.
+            </div>
+            
+            
+
+     
+
+    <div class="narrative-story-container">
+        <!-- First Panel: Apocalyptic Scene -->
+        <div class="apocalyptic-opening-scene">
+            <div class="doom-villain-figure">
+                <img src="sto 1.png">
+            </div>
+            
+            <div class="panicked-civilian-blonde">
+                <img src="sto 3.png">
+            </div>
+            
+            <div class="crying-girl-character">
+                      <img src="sto 2.png">
+            </div>
+            
+            <div class="running-child-figure">
+                       <img src="sto 4.png">
+            </div>
+       
+            
+            <div class="doomsday-prophecy-text">
+                "The world has stopped dreaming. If it does not dream again, the end will come..."<br>
+                People panicked. Trees wilted. The birds stopped singing. It felt like Doomsday had arrived.
+            </div>
+        </div>
+
+        <!-- Second Panel: Library Scene -->
+        <div class="children-library-scene">
+            <div class="happy-children-group">
+                <img src="sto 5.png">
+            </div>
+              <div class="library-setting-text">
+                But while adults shouted and scientists stared at screens, a group of children gathered in the library, whispering under a blanket of books and dust.
+            </div>
+            
+            <div class="main-girl-character">
+               <img src="sto 6.png">
+               </div>
+               <div class="character-introduction ">
+               There was Leo the sketch artist, Zara the storyteller, Mina the song maker, and Ben, who believed the stars could hear him<br>
+                "I think the world dreams through us," said Zara. "And maybe... we stopped dreaming too."
+            </div>
+                </div>
+            
+            
+          
+        
+            
+
+         <div class="introduction-scene">
+            <div class="zara-character-left">
+                <img src="sto 6.png" alt="Zara - Girl with blonde hair">
+            </div>
+            
+            <div class="ben-character-right">
+                <img src="sto 7.png" alt="Ben - Boy with brown hair">
+            </div>
+            
+            <div class="introduction-text">
+                <h3>There was Leo the sketch artist, Zara the storyteller, Mina the song maker, and Ben, who believed the stars could hear him.</h3>
+            </div>
+            
+            <div class="zara-quote">
+                "I think the world dreams through us," said Zara. "And maybe... we stopped dreaming too."<br>So, they began.
+            </div>
+            
+            <div class="story-begins">
+                Leo Draw a picture of a floating island made of jellybeans. Mina Sang a lullaby to the wind. Ben whispered wishes to the stars.And Zara - she told a story so powerful it made the walls shiver:
+            </div>
+        </div>
+
+
+     <div class="serene-landscape-container">
+        <div class="panoramic-nature-scene">
+           <img src="story1.jpg">
+        </div>
+        
+        <div class="narrative-conclusion-text">
+            <p class="mystical-voice-description">
+                The voice returned, but this time, it laughed—a warm, rolling sound like thunder learning to smile.
+            </p>
+            <p class="dream-alive-proclamation">
+                "The dream is alive. Doomsday is not today."
+            </p>
+            <p class="salvation-through-imagination">
+                And just like that, Willowdrop was saved—not by warriors or machines, but by a group of kids who remembered how to imagine.
+            </p>
+        </div>
+        
+        <div class="audio-narration-section">
+            <h3 class="read-aloud-title">Read Aloud</h3>
+            <div class="custom-audio-player">
+                <button class="playback-control-button" id="playPauseBtn">
+                    <div class="play-icon-symbol" id="playIcon"></div>
+                    <div class="pause-icon-bars" id="pauseIcon">
+                        <div class="pause-bar-left"></div>
+                        <div class="pause-bar-right"></div>
+                    </div>
+                </button>
+                
+                <div class="audio-progress-container">
+                    <div class="progress-track-background" id="progressTrack">
+                        <div class="progress-fill-indicator" id="progressFill"></div>
+                        <div class="progress-thumb-handle" id="progressThumb"></div>
+                    </div>
+                </div>
+                
+                <div class="time-duration-display" id="timeDisplay">5:00</div>
+                
+                <button class="volume-control-button" id="volumeBtn">
+                    <svg class="volume-icon-waves" viewBox="0 0 24 24">
+                        <path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02zM14 3.23v2.06c2.89.86 5 3.54 5 6.71s-2.11 5.85-5 6.71v2.06c4.01-.91 7-4.49 7-8.77s-2.99-7.86-7-8.77z"/>
+                    </svg>
+                </button>
+                
+                <div class="audio-loading-state" id="loadingState">Loading...</div>
+            </div>
+        </div>
+    </div>
+
+    <div class="main-container">
+        <h1 class="section-title">Similar Stories</h1>
+        
+        <div class="stories-grid">
+            <div class="sstory-card ">
+                <div class="book-cover-wrapper">
+                    <div class="cover-image ">
+                        <img src="ad 3.jpg">
+                    </div>
+                </div>
+                <p class="story-description">
+                    Once, in a little town called Willowdrop, the sky was always smiling. Clouds danced, the sun beamed, and kids played under the bright blue dome.
+                </p>
+            </div>
+            
+            <div class="sstory-card ">
+                <div class="book-cover-wrapper">
+                    <div class="cover-image ">
+                        <img src="ad 4.jpg">
+                    </div>
+                </div>
+                <p class="story-description">
+                    Once, in a little town called Willowdrop, the sky was always smiling. Clouds danced, the sun beamed, and kids played under the bright blue dome.
+                </p>
+            </div>
+        </div>
+
+         <div class="stories-grid">
+            <div class="sstory-card ">
+                <div class="book-cover-wrapper">
+                    <div class="cover-image ">
+                        <img src="sim 3.jpg">
+                    </div>
+                </div>
+                <p class="story-description">
+                    Once, in a little town called Willowdrop, the sky was always smiling. Clouds danced, the sun beamed, and kids played under the bright blue dome.
+                </p>
+            </div>
+            
+            <div class="sstory-card ">
+                <div class="book-cover-wrapper">
+                    <div class="cover-image ">
+                        <img src="ad 6.jpg">
+                    </div>
+                </div>
+                <p class="story-description">
+                    Once, in a little town called Willowdrop, the sky was always smiling. Clouds danced, the sun beamed, and kids played under the bright blue dome.
+                </p>
+            </div>
+        </div>
+        
+   
+         
+        
+    
+
+     <div class="footer-container">
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="footer logo.png">
+                <div class="flogo-text">MagicPage</div><br>
+             </div>
+            <div class="copyright">2025 Magicpage Limited</div>
+           
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Magicpage corporate</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Available in</h3>
+                <ul>
+                    <li><a href="#">Coimbatore</a></li>
+                    <li><a href="#">Bengaluru</a></li>
+                    <li><a href="#">Chennai</a></li>
+                    <li><a href="#">kolkata</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms& Conditions</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                    <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                    <a href="#" class="social-icon "><img src="youtube.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-download">
+            <div class="app-text">For better experience , download the app now</div>
+            <div class="app-buttons">
+                <a href="#" class="app-button">
+                    <div class="app-icon"><img src="googleplay.png"></div>
+                    
+                </a>
+                <a href="#" class="app-button">
+                    <div class="app-icon "><img src="applestore.png"></div>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

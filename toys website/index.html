@@ -1,0 +1,468 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+   <!-- Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="navlogo-icon"><img src="nav logo.png"></div>
+                <span>MagicPage</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Here..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                <div class="user-icon" id="userIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signinModal">
+        <div class="signin-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <p class="modal-subtitle">Sign in to your MagicPage account</p>
+            </div>
+            
+            <form class="signin-form" id="signinForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-input" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#forgot">Forgot your password?</a>
+            </div>
+            
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-signin">
+                <button class="social-btn" id="googleSignin">
+                    <i class="fab fa-google" style="color: #db4437;"></i>
+                    Google
+                </button>
+                <button class="social-btn" id="facebookSignin">
+                    <i class="fab fa-facebook" style="color: #4267B2;"></i>
+                    Facebook
+                </button>
+            </div>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="#signup">Sign up here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Area -->
+    <div class="search-results">
+        <div class="search-status" id="searchStatus"></div>
+        
+        <!-- Sample search results that will be shown when searching -->
+        <div class="result-item" id="result1" data-keywords="home welcome landing main page">
+            <div class="result-title">Home Page</div>
+            <div class="result-description">Welcome to MagicPage - your gateway to amazing content and stories.</div>
+        </div>
+        
+        <div class="result-item" id="result2" data-keywords="stories tales content articles blog posts">
+            <div class="result-title">Stories Section</div>
+            <div class="result-description">Discover captivating stories and articles from our community of writers.</div>
+        </div>
+        
+        <div class="result-item" id="result3" data-keywords="about company team mission vision history">
+            <div class="result-title">About Us</div>
+            <div class="result-description">Learn more about our company, mission, and the team behind MagicPage.</div>
+        </div>
+        
+        <div class="result-item" id="result4" data-keywords="contact support help email phone address">
+            <div class="result-title">Contact Information</div>
+            <div class="result-description">Get in touch with our support team for any questions or assistance.</div>
+        </div>
+        
+        <div class="result-item" id="result5" data-keywords="blog news updates articles latest posts">
+            <div class="result-title">Blog & News</div>
+            <div class="result-description">Stay updated with our latest blog posts, news, and announcements.</div>
+        </div>
+    </div>
+
+     <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-container">
+            <div class="bloghero-content">
+                <div class="thor-character-left"><img src="jerry left.png"></div>
+                <div class="bloghero-message">
+                    <div class="bloghero-quote">
+                        "Every Story sparks imagination - let your child's next adventure begin here."
+                    </div>
+                   <a href="adventure.html" style="text-decoration: none;"><button class="read-story-button">Read Your Story</button></a>
+                </div>
+                <div class="thor-character-right"><img src="eagle right.png"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section class="story-categories-section">
+        <h2 class="categories-header-title">CATEGORIES</h2>
+        
+        <div class="category-grid-container">
+            <div class="category-item-wrapper">
+                <div class="category-icon-container">
+                    <img src="download (1).png">
+                </div>
+                <div class="category-label-text">Adventure Story</div>
+            </div>
+
+            <div class="category-item-wrapper">
+                <div class="category-icon-container">
+                    <img src="download (2).png">
+                </div>
+                <div class="category-label-text">Animal Tale</div>
+            </div>
+
+            <div class="category-item-wrapper">
+<div class="category-icon-container">
+                    <img src="download (3).png">
+                </div>
+                <div class="category-label-text">Bedtime Story</div>
+            </div>
+
+            <div class="category-item-wrapper">
+                <div class="category-icon-container">
+                    <img src="images.png">
+                </div>
+                <div class="category-label-text">Friendship & Family</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Stories Section -->
+    <section class="featured-stories-section">
+        <h2 class="featured-section-title">FEATURED STORIES</h2>
+        <p class="featured-section-description">Welcome to the Featured Stories section — where all the coolest, funniest, and most magical tales live! We've picked these just for you, like treasures in a story chest.</p>
+        
+        <div class="stories-grid-layout">
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="ad 1.jpg"></div>
+                <div class="story-card-title">Superstar Stories</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="in 2.jpg"></div>
+                <div class="story-card-title">Kid Favorites</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="in 3.jpg"></div>
+                <div class="story-card-title">Brand-New Tales</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="in 4.jpg"></div>
+                <div class="story-card-title">Stories That Teach</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Seasonal Tales Section -->
+    <section class="seasonal-tales-section">
+        <h2 class="seasonal-section-title">SEASONAL TALES</h2>
+        <p class="seasonal-description-text">Timely stories for holidays, seasons, and special moments.</p>
+        
+        <div class="stories-grid-layout">
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="sea 1.jpg"></div>
+                <div class="story-card-title">The Seasons</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="blog 4.jpg"></div>
+                <div class="story-card-title">Hello Autumn</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="sea 3.jpg"></div>
+                <div class="story-card-title">Catch the Wind</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="ad 2.jpg"></div>
+                <div class="story-card-title">The Wind Weaver</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- New Arrivals Section -->
+    <section class="new-arrivals-section">
+        <h2 class="arrivals-section-title">NEW ARRIVALS</h2>
+        <p class="arrivals-description-text">Fresh stories added to our growing library.</p>
+        
+        <div class="stories-grid-layout">
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="f5.jpg"></div>
+                <div class="story-card-title">The Peddler's Road</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="in 8.jpg"></div>
+                <div class="story-card-title">Beast Lands</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="blog 9.jpg"></div>
+                <div class="story-card-title">Diary at the Edge of the World</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="blog 8.jpg"></div>
+                <div class="story-card-title">The Boy Who Flew</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Most Loved Section -->
+    <section class="most-loved-section">
+        <h2 class="loved-section-title">MOST LOVED</h2>
+        <p class="loved-description-text">Popular stories that kids keep coming back to.</p>
+        
+        <div class="stories-grid-layout">
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="season 1.jpg"></div>
+                <div class="story-card-title">Nightlights</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="blog 6.png"></div>
+                <div class="story-card-title">Alice in Wonderland</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="ad 3.jpg"></div>
+                <div class="story-card-title">The Jungle Book</div>
+            </div>
+            
+            <div class="story-card-container">
+                <div class="story-card-image "><img src="season 2.jpg"></div>
+                <div class="story-card-title">The Magical Paintbrush</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- What We Do Section -->
+    <section class="what-we-do">
+        <div class="about-container">
+            <h2 class="aboutsection-title">What We Do ?</h2>
+            <p class="aboutsection-subtitle">
+                At MagicPage, we bring stories to life — right from your screen!<br>
+                We believe that every child deserves to grow up with the magic of storytelling.<br><br>
+                That's why we've created a fun, safe, and colorful place for kids to explore, imagine, and learn through stories.
+            </p>
+
+            <div class="services-grid">
+                <div class="mickey-left"><img src="mickey left.png"></div>
+                
+                <div class="services-list">
+                    <div class="service-item">
+                        <span class="service-icon">📚</span> Curate Amazing Stories
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🎵</span> Offer Read-Aloud Experiences
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">😊</span> Make Reading Fun for All Ages
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">⚡</span> Let Kids Create Their Own Stories
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🎨</span> Provide Beautiful Illustrations
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">👨‍👩‍👧‍👦</span> Support Parents & Educators
+                    </div>
+                    <div class="service-item">
+                        <span class="service-icon">🛡️</span> Ensure a Safe, Ad-Free Environment
+                    </div>
+                </div>
+
+                <div class="mickey-right"><img src="mickey right.jpg"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Customer Testimonial Section -->
+    <section class="customer-testimonial-section">
+        <h2 class="testimonial-header-title">Customer Testimonial</h2>
+        
+        <div class="testimonial-card-wrapper">
+            <div class="customer-avatar-image"><img src="customer.jpg"></div>
+            
+            <div class="rating-stars-container">
+                <span class="star-rating-icon">★</span>
+                <span class="star-rating-icon">★</span>
+                <span class="star-rating-icon">★</span>
+                <span class="star-rating-icon">★</span>
+                <span class="star-rating-icon">★</span>
+            </div>
+            
+            <div class="testimonial-quote-text">"A bedtime game-changer!"</div>
+            
+            <div class="testimonial-content-text">
+                "My daughter used to struggle to settle down at night, but now she looks forward to picking a new story every evening. The audio feature is a lifesaver when I'm busy — and the stories are so creative and age-appropriate. Thank you for making reading fun again!"
+            </div>
+            
+            <div class="customer-name-attribution">Priya S., Mom of a 6-year-old</div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="company-team-section">
+        <h2 class="team-section-title">The Team</h2>
+        
+        <div class="team-description-text">
+            We're a group of storytellers, educators, illustrators, and tech lovers on a mission to make reading magical for every child. Together, we create safe, joyful, and inspiring stories that spark imagination and learning.
+        </div>
+        
+        <div class="team-members-grid">
+            <div class="team-member-card">
+                <div class="member-photo-container"><img src="team 1.png"></div>
+                <div class="member-name-title">Seth Rollins</div>
+                <div class="member-role-description">Story Creator</div>
+            </div>
+            
+            <div class="team-member-card">
+                <div class="member-photo-container"><img src="team 2.png"></div>
+                <div class="member-name-title">Seth Rollins</div>
+                <div class="member-role-description">Content Creator</div>
+            </div>
+            
+            <div class="team-member-card">
+                <div class="member-photo-container"><img src="team 3.png"></div>
+                <div class="member-name-title">Seth Rollins</div>
+                <div class="member-role-description">Content Creator</div>
+            </div>
+        </div>
+    </section>
+
+    
+   <div class="footer-container">
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="footer logo.png">
+                <div class="flogo-text">MagicPage</div><br>
+             </div>
+            <div class="copyright">2025 Magicpage Limited</div>
+           
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Magicpage corporate</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Available in</h3>
+                <ul>
+                    <li><a href="#">Coimbatore</a></li>
+                    <li><a href="#">Bengaluru</a></li>
+                    <li><a href="#">Chennai</a></li>
+                    <li><a href="#">kolkata</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms& Conditions</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                    <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                    <a href="#" class="social-icon "><img src="youtube.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-download">
+            <div class="app-text">For better experience , download the app now</div>
+            <div class="app-buttons">
+                <a href="#" class="app-button">
+                    <div class="app-icon"><img src="googleplay.png"></div>
+                    
+                </a>
+                <a href="#" class="app-button">
+                    <div class="app-icon "><img src="applestore.png"></div>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+     <link rel="stylesheet" href="style.css">
+     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+   <!-- Header -->
+    <header class="nav-header">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <div class="navlogo-icon"><img src="nav logo.png"></div>
+                <span>MagicPage</span>
+            </div>
+            
+            <nav>
+                <ul class="nav-menu">
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="stories.html">Stories</a></li>
+                    <li><a href="about.html">About us</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="blog.html">Blog</a></li>
+                </ul>
+            </nav>
+            
+            <div class="nav-right">
+                <div class="search-container">
+                    <input type="text" class="search-input" placeholder="Search Here..." id="searchInput">
+                    <button class="search-btn" id="searchBtn">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                    <div class="search-suggestions" id="searchSuggestions"></div>
+                </div>
+                <div class="user-icon" id="userIcon">
+                    <i class="fa-solid fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Sign In Modal -->
+    <div class="modal-overlay" id="signinModal">
+        <div class="signin-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fa-solid fa-times"></i>
+            </button>
+            
+            <div class="modal-header">
+                <h2 class="modal-title">Welcome Back!</h2>
+                <p class="modal-subtitle">Sign in to your MagicPage account</p>
+            </div>
+            
+            <form class="signin-form" id="signinForm">
+                <div class="form-group">
+                    <label class="form-label" for="email">Email Address</label>
+                    <input type="email" class="form-input" id="email" placeholder="Enter your email" required>
+                </div>
+                
+                <div class="form-group">
+                    <label class="form-label" for="password">Password</label>
+                    <input type="password" class="form-input" id="password" placeholder="Enter your password" required>
+                </div>
+                
+                <button type="submit" class="signin-btn">Sign In</button>
+            </form>
+            
+            <div class="forgot-password">
+                <a href="#forgot">Forgot your password?</a>
+            </div>
+            
+            <div class="divider">
+                <span>or continue with</span>
+            </div>
+            
+            <div class="social-signin">
+                <button class="social-btn" id="googleSignin">
+                    <i class="fab fa-google" style="color: #db4437;"></i>
+                    Google
+                </button>
+                <button class="social-btn" id="facebookSignin">
+                    <i class="fab fa-facebook" style="color: #4267B2;"></i>
+                    Facebook
+                </button>
+            </div>
+            
+            <div class="signup-link">
+                Don't have an account? <a href="#signup">Sign up here</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Search Results Area -->
+    <div class="search-results">
+        <div class="search-status" id="searchStatus"></div>
+        
+        <!-- Sample search results that will be shown when searching -->
+        <div class="result-item" id="result1" data-keywords="home welcome landing main page">
+            <div class="result-title">Home Page</div>
+            <div class="result-description">Welcome to MagicPage - your gateway to amazing content and stories.</div>
+        </div>
+        
+        <div class="result-item" id="result2" data-keywords="stories tales content articles blog posts">
+            <div class="result-title">Stories Section</div>
+            <div class="result-description">Discover captivating stories and articles from our community of writers.</div>
+        </div>
+        
+        <div class="result-item" id="result3" data-keywords="about company team mission vision history">
+            <div class="result-title">About Us</div>
+            <div class="result-description">Learn more about our company, mission, and the team behind MagicPage.</div>
+        </div>
+        
+        <div class="result-item" id="result4" data-keywords="contact support help email phone address">
+            <div class="result-title">Contact Information</div>
+            <div class="result-description">Get in touch with our support team for any questions or assistance.</div>
+        </div>
+        
+        <div class="result-item" id="result5" data-keywords="blog news updates articles latest posts">
+            <div class="result-title">Blog & News</div>
+            <div class="result-description">Stay updated with our latest blog posts, news, and announcements.</div>
+        </div>
+    </div>
+
+      <!-- Hero Section -->
+    <section class="blog-hero">
+        <div class="blog-container">
+            <div class="bloghero-content">
+                <div class="thor-character-left"><img src="con 1.png"></div>
+                <div class="bloghero-message">
+                    <div class="bloghero-quote">
+                        "Every Great Story begins with Converstion  - we'd love to hear yourss."
+                    </div>
+                </div>
+                <div class="thor-character-right"><img src="con 2.png"></div>
+            </div>
+        </div>
+    </section>
+
+
+     <div class="contact-wrapper">
+          <!-- Contact Details Section -->
+        <section class="contact-details-section">
+            <div class="details-header">
+                <h2 class="details-title">Contact Details</h2>
+            </div>
+
+            <div class="details-grid">
+                <div class="detail-card">
+                    <span class="detail-icon"><i class="fa-solid fa-location-dot"></i></span>
+                    <div class="detail-type">Location</div>
+                    <div class="detail-info">
+                        78 Beechwood Ave<br>
+                        Sarasota, FL 34231
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon"><i class="fa-solid fa-envelope"></i></span>
+                    <div class="detail-type">E-mail</div>
+                    <div class="detail-info">
+                        example@gmail.com<br>
+                        debra.holt@example.com
+                    </div>
+                </div>
+
+                <div class="detail-card">
+                    <span class="detail-icon"><i class="fa-solid fa-phone"></i></span>
+                    <div class="detail-type">Contact</div>
+                    <div class="detail-info">
+                        01945789632<br>
+                        01645789633
+                    </div>
+                </div>
+            </div>
+        </section>
+       <!-- Contact Form Section -->
+        <section class="contact-form-section">
+            <div class="form-container">
+                <div class="form-header">
+                    <h1 class="form-title">Have a Doubt? We've Got the Solution—Contact Us Now!</h1>
+                    <h2 class="form-subtitle">Write Us</h2>
+                    <p class="form-description">
+                        We are always happy to be of service to you. Be sure to listen to the prompt to help direct you to the right person.
+                    </p>
+                </div>
+
+                <div class="form-layout">
+                    <div class="form-fields">
+                        <form id="contactForm">
+                            <div class="field-group">
+                                <label class="field-label">Full Name *</label>
+                                <input type="text" class="form-input" id="fullName" placeholder="Enter your full name" required>
+                                <div class="error-message">Please enter your full name</div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label">Email *</label>
+                                <input type="email" class="form-input" id="email" placeholder="Enter your email address" required>
+                                <div class="error-message">Please enter a valid email address</div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label">Phone Number</label>
+                                <input type="tel" class="form-input" id="phone" placeholder="Enter your phone number">
+                                <div class="error-message">Please enter a valid phone number</div>
+                            </div>
+
+                            <div class="field-group">
+                                <label class="field-label">Your Message *</label>
+                                <textarea class="form-input message-field" id="message" placeholder="Tell us how we can help you..." required></textarea>
+                                <div class="error-message">Please enter your message</div>
+                            </div>
+
+                            <button type="submit" class="submit-button" id="submitBtn">
+                                <span class="btn-text">SEND NOW</span>
+                                <div class="loading-spinner"></div>
+                            </button>
+                        </form>
+                    </div>
+
+                    <div class="form-images">
+                        <div class="contact-image">
+                            <img src="contact 1.png" alt="Contact Image 1">
+                        </div>
+                        <div class="contact-image">
+                            <img src="contact 2.png" alt="Contact Image 2">
+                        </div>
+                        <div class="contact-image">
+                            <img src="contact 3.png" alt="Contact Image 3">
+                        </div>
+                        <div class="contact-image">
+                            <img src="contact 4.png" alt="Contact Image 4">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Success Modal -->
+    <div class="modal-overlay" id="successModal">
+        <div class="success-modal">
+            <button class="close-modal" id="closeModal">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="success-icon">
+                <i class="fas fa-check"></i>
+            </div>
+            
+            <h2 class="modal-title">Message Received!</h2>
+            <p class="modal-message">
+                Thank you for reaching out to us. Your message has been successfully received and our team will get back to you within 24 hours.
+            </p>
+            
+            <div class="modal-details" id="messageDetails">
+                <!-- Form details will be populated here -->
+            </div>
+            
+            <div class="modal-buttons">
+                <button class="modal-btn btn-primary" id="okBtn">OK, Got It!</button>
+                <button class="modal-btn btn-secondary" id="sendAnotherBtn">Send Another Message</button>
+            </div>
+        </div>
+    </div>
+    
+      
+    </div>
+
+
+      <div class="footer-container">
+        <div class="footer-header">
+            <div class="footer-logo">
+                <img src="footer logo.png">
+                <div class="flogo-text">MagicPage</div><br>
+             </div>
+            <div class="copyright">2025 Magicpage Limited</div>
+           
+        </div>
+
+        <div class="footer-content">
+            <div class="footer-column">
+                <h3>Company</h3>
+                <ul>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Magicpage corporate</a></li>
+                    <li><a href="#">Careers</a></li>
+                    <li><a href="#">Team</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Contact us</h3>
+                <ul>
+                    <li><a href="#">Help & Support</a></li>
+                    <li><a href="#">Partner with us</a></li>
+                    <li><a href="#">Ride with us</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Available in</h3>
+                <ul>
+                    <li><a href="#">Coimbatore</a></li>
+                    <li><a href="#">Bengaluru</a></li>
+                    <li><a href="#">Chennai</a></li>
+                    <li><a href="#">kolkata</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Legal</h3>
+                <ul>
+                    <li><a href="#">Terms& Conditions</a></li>
+                    <li><a href="#">Cookie policy</a></li>
+                    <li><a href="#">Privacy Policy</a></li>
+                </ul>
+            </div>
+
+            <div class="footer-column">
+                <h3>Information</h3>
+                <ul>
+                    <li><a href="#">Location</a></li>
+                    <li><a href="#">Email</a></li>
+                    <li><a href="#">Social Media</a></li>
+                </ul>
+                <div class="social-icons">
+                    <a href="#" class="social-icon "><img src="insta.jpg"></a>
+                    <a href="#" class="social-icon "><img src="whatsapp.jpg"></a>
+                    <a href="#" class="social-icon "><img src="youtube.png"></a>
+                </div>
+            </div>
+        </div>
+
+        <div class="app-download">
+            <div class="app-text">For better experience , download the app now</div>
+            <div class="app-buttons">
+                <a href="#" class="app-button">
+                    <div class="app-icon"><img src="googleplay.png"></div>
+                    
+                </a>
+                <a href="#" class="app-button">
+                    <div class="app-icon "><img src="applestore.png"></div>
+                    
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
